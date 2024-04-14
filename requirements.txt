@@ -1,0 +1,9 @@
+asgiref==3.8.1
+Django==4.2
+pip==24.0
+setuptools==69.0.3
+sqlparse==0.4.4
+tzdata==2024.1
+wheel==0.42.0
+gunicorn
+psycopg2==2.9.9

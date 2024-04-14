@@ -1,0 +1,16 @@
+<ul>
+    {% for item in menu_items %}
+        <li class="menu-item {% if item.active %}active{% endif %}">
+            <a href="{{ item.get_url }}">{{ item.name }}</a>
+            {% if item.children.all %}
+                <ul class="submenu">
+                    {% for child in item.children.all %}
+                        <li class="menu-item {% if child.active %}active{% endif %}">
+                            <a href="{{ child.get_url }}">{{ child.name }}</a>
+                        </li>
+                    {% endfor %}
+                </ul>
+            {% endif %}
+        </li>
+    {% endfor %}
+</ul>
